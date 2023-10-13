@@ -1,3 +1,5 @@
+import 'package:buy_sell_app/views/home/tabs/blockDeals.dart';
+import 'package:buy_sell_app/views/home/tabs/bulkDeals.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,10 +11,35 @@ class HomePage extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      body: Container(
-        height: screenHeight,
-        width: screenWidth,
-        
+      body: DefaultTabController(
+        length: 2,
+        child: SafeArea(
+          child: SizedBox(
+            height: screenHeight * 1,
+            width: screenWidth,
+            child: Column(
+              children: [
+                TabBar(tabs: [
+                  Tab(
+                    child: Text(
+                      "Bulk Deal",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      'Block Deals',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  )
+                ]),
+                Expanded(
+                  child: TabBarView(children: [BulkDealTab(), BlockDealTab()]),
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
