@@ -1,8 +1,14 @@
+import 'package:buy_sell_app/firebase_options.dart';
+import 'package:buy_sell_app/myDependencies.dart';
 import 'package:buy_sell_app/views/home/homePage.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -13,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Buy_Sell',
-      initialBinding: ,
+      initialBinding: MyDependencies(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

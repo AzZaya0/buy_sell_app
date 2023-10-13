@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104118958568",
+    "project_id": "intern-intuji",
+    "storage_bucket": "intern-intuji.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104118958568:android:65064a426d14baef92cc5d",
+        "android_client_info": {
+          "package_name": "com.example.buy_sell_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALVu9qo7jUEVY1YWdAm1F3ymvwrq7zjtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
